@@ -1,5 +1,5 @@
 # LPCAM
-The official code of CVPR 2023 paper(Extracting Class Activation Maps from Non-Discriminative Features as well)
+The official code of CVPR 2023 paper (Extracting Class Activation Maps from Non-Discriminative Features as well)
 
 ## Prerequisite
 - Python 3.6, PyTorch 1.9, and others in environment.yml
@@ -14,7 +14,7 @@ conda env create -f environment.yml
 ### Step 2. Train classification network and generate LPCAM seeds.
 - Please specify a workspace to save the model and logs.
 ```
-CUDA_VISIBLE_DEVICES=0 python run_sample.py --voc12_root ./VOCdevkit/VOC2012/ --work_space YOUR_WORK_SPACE --train_cam_pass True --make_cam_pass True --make_LPCAM_pass True --eval_cam_pass True 
+CUDA_VISIBLE_DEVICES=0 python run_sample.py --voc12_root ./VOCdevkit/VOC2012/ --work_space YOUR_WORK_SPACE --train_cam_pass True --make_cam_pass True --make_lpcam_pass True --eval_cam_pass True 
 ```
 ### Step 3. Train IRN and generate pseudo masks.
 ```
@@ -33,7 +33,7 @@ Please replace the groundtruth masks with generated pseudo masks.
 ### Step 2. Train classification network and generate LPCAM seeds.
 - Please specify a workspace to save the model and logs.
 ```
-CUDA_VISIBLE_DEVICES=0 python run_sample_coco.py --mscoco_root ../MSCOCO/ --work_space YOUR_WORK_SPACE --train_cam_pass True --make_cam_pass True --make_LPCAM_pass True --eval_cam_pass True 
+CUDA_VISIBLE_DEVICES=0 python run_sample_coco.py --mscoco_root ../MSCOCO/ --work_space YOUR_WORK_SPACE --train_cam_pass True --make_cam_pass True --make_lpcam_pass True --eval_cam_pass True 
 ```
 ### Step 3. Train IRN and generate pseudo masks.
 ```
