@@ -13,14 +13,6 @@ from misc import imutils
 import net.resnet50_cam as resnet50_cam
 
 
-def print_tensor(x,n=3):
-    for i in range(x.shape[0]):
-        print(i,'xxx',end=' ')
-        for j in range(x.shape[1]):
-            print(round(x[i,j],n),end=' ')
-        print()
-
-
 def split_100(mscoco_root,save_dir='./mscoco/',seed=666):
     dataset = mscoco.dataloader.COCOClassificationDataset(
         image_dir = osp.join(mscoco_root,'train2014/'),
@@ -145,9 +137,9 @@ def load_feature_select_and_cluster(mscoco_root,workspace,feature_dir,mask_dir,c
         centers[class_id] = cluster_center.cpu()
         
         ##### print similarity matrix
-        print_tensor(prob.numpy())
-        for i in range(num_cluster):
-            print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x==i).item())
+        # print_tensor(prob.numpy())
+        # for i in range(num_cluster):
+        #     print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x==i).item())
             
         
         ###### calc similarity
@@ -160,9 +152,9 @@ def load_feature_select_and_cluster(mscoco_root,workspace,feature_dir,mask_dir,c
         context[class_id] = cluster_center2.cpu()
         
         ##### print similarity matrix
-        print_tensor(prob.numpy())
-        for i in range(num_cluster):
-            print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x2==i).item())
+        # print_tensor(prob.numpy())
+        # for i in range(num_cluster):
+        #     print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x2==i).item())
         
         
 
