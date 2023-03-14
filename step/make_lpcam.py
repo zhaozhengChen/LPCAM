@@ -122,9 +122,9 @@ def load_feature_select_and_cluster(workspace, feature_dir, mask_dir, ckpt_path,
         centers[class_id] = cluster_center.cpu()
         
         ##### print similarity matrix
-        print_tensor(prob.numpy())
-        for i in range(num_cluster):
-            print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x==i).item())
+        # print_tensor(prob.numpy())
+        # for i in range(num_cluster):
+        #     print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x==i).item())
         
         ###### calc similarity
         sim = torch.mm(cluster_centers2,w.T)
@@ -136,9 +136,9 @@ def load_feature_select_and_cluster(workspace, feature_dir, mask_dir, ckpt_path,
         context[class_id] = cluster_center2.cpu()
         
         ##### print similarity matrix
-        print_tensor(prob.numpy())
-        for i in range(num_cluster):
-            print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x2==i).item())
+        # print_tensor(prob.numpy())
+        # for i in range(num_cluster):
+        #     print(selected_cluster[i].item(), round(prob[i,class_id].item(),3), torch.sum(cluster_ids_x2==i).item())
 
     # torch.save(centers.cpu(), osp.join(workspace+'class_ceneters'+'.pt'))
     torch.save(centers, osp.join(workspace,'class_ceneters'+'.pt'))
