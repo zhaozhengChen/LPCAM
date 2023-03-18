@@ -20,6 +20,8 @@ CUDA_VISIBLE_DEVICES=0 python run_sample.py --voc12_root ./VOCdevkit/VOC2012/ --
 ```
 CUDA_VISIBLE_DEVICES=0 python run_sample.py --voc12_root ./VOCdevkit/VOC2012/ --work_space YOUR_WORK_SPACE --cam_to_ir_label_pass True --train_irn_pass True --make_sem_seg_pass True --eval_sem_seg_pass True 
 ```
+You can download the pseudo labels from this [link](https://drive.google.com/file/d/1eDyD1b0nVI2WY4TcuN71yx8OoAOfsIlU/view?usp=share_link).
+
 ### Step 4. Train semantic segmentation network.
 To train DeepLab-v2, we refer to [deeplab-pytorch](https://github.com/kazuto1011/deeplab-pytorch). 
 We use the [ImageNet pre-trained model](https://drive.google.com/file/d/14soMKDnIZ_crXQTlol9sNHVPozcQQpMn/view?usp=sharing) for DeepLabV2 provided by [AdvCAM](https://github.com/jbeomlee93/AdvCAM).
@@ -39,9 +41,10 @@ CUDA_VISIBLE_DEVICES=0 python run_sample_coco.py --mscoco_root ../MSCOCO/ --work
 ```
 CUDA_VISIBLE_DEVICES=0 python run_sample_coco.py --mscoco_root ../MSCOCO/ --work_space YOUR_WORK_SPACE --cam_to_ir_label_pass True --train_irn_pass True --make_sem_seg_pass True --eval_sem_seg_pass True 
 ```
+You can download the pseudo labels from this [link](https://drive.google.com/file/d/1UHglmht8PjJdRz71IrG2b8ENMN2Nn6P0/view?usp=share_link).
+
 ### Step 4. Train semantic segmentation network.
 - The same as PASCAL VOC.
-
 
 ## Acknowledgment
 This code is borrowed from [IRN](https://github.com/jiwoon-ahn/irn) and [ReCAM](https://github.com/zhaozhengChen/ReCAM).
