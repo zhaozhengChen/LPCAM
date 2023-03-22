@@ -1,5 +1,6 @@
 # LPCAM
-The official code of CVPR 2023 paper (Extracting Class Activation Maps from Non-Discriminative Features as well)
+The official code of CVPR 2023 paper (Extracting Class Activation Maps from Non-Discriminative Features as well).
+[arXiv](https://arxiv.org/abs/2303.10334)
 
 ## Prerequisite
 - Python 3.6, PyTorch 1.9, and others in environment.yml
